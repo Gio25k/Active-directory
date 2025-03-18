@@ -82,14 +82,15 @@ Change your Domain Controllers Private IP Address to "Static"
 <img src="https://i.gyazo.com/e575c25b1415fa3e3b12726bcc1b46dc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go to "Windows Defender Firewall with Advanced Security" and click "Windows Defender Firewall Properties"
 </p>
 <br />
 <p>
 <img src="https://i.gyazo.com/9614fcb1478174ec8166c0efc46d6067.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Turn off "Firewall State" in the 3 tabs "Domain Profile", "Private Profile", and "Public Profile"
+Make sure you click "Apply" and "Ok" to continue on
 </p>
 <br />
 
@@ -97,16 +98,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.gyazo.com/ef20a0fe2263aba5329834ae4d568bc0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Retrieve DC-1 VM private IP address and copy it
+Navigate to Client-1 VM -> Network Settings -> click on "Network Interface / IP configuration" box
+On the left side of window, click on "DNS servers"
+
 </p>
 <br />
-
 <p>
 <img src="https://i.gyazo.com/d6a1447e3925118aad36f285db21db79.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+Under "DNS servers", select the "Custom" option and paste the DC-1 private IP address
+
 <p>
-  
+
+
+
 <img src="https://camo.githubusercontent.com/9cbc328a84031a431502655f70f0ec16fcf10cf14560a806a2c0dd6bcb488442/68747470733a2f2f692e696d6775722e636f6d2f38677a644373362e706e67" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Within the Client-1 VM, open PowerShell
+Ping the Domain Controller by typing "ping(private IP address)" (Example: ping 10.0.0.4)
+Observe and make sure the ping is successful
 </p>
 <br />
